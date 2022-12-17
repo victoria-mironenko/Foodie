@@ -1,0 +1,2 @@
+# Foodie
+JS educational project
