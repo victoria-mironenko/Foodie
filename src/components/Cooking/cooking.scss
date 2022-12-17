@@ -1,0 +1,252 @@
+.cooking__wrapper {
+    margin-top: 80px;
+    margin-bottom: 160px;
+    display: flex;
+    gap: 40px;
+}
+
+.cooking-step {
+    flex: 0 1 840px;
+}
+
+.other-recipe {
+    flex: 0 1 400px;
+}
+
+.ingredients-list {
+    margin-bottom: 64px;
+}
+
+.ingredients-list__item {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ingredients-list__item>p {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    font-size: 18px;
+    font-size: calc(14px + 4*(100vw / 1920));
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+}
+
+.checked > p {
+    text-decoration-line: line-through;
+    opacity: 0.2;
+    font-size: 16px;
+    font-size: calc(10px + 6*(100vw / 1920));
+    
+}
+
+.fill {
+    display: none;
+}
+
+.checked .fill {
+    display: block;
+}
+.checked .empty {
+    display: none;
+}
+
+.checked  h5 {
+    text-decoration-line: line-through;
+    opacity: 0.2;
+}
+
+.cooking-step__ingredients {
+    margin-bottom: 48px;
+}
+
+.step-list__item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.cooking-step__direction {
+    padding-top: 24px;
+}
+
+.step-list-image {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    max-width: 100%;
+}
+
+.step-list__text>h5 {
+    margin-bottom: 24px;
+}
+
+.other-recipe>h4 {
+    margin-bottom: 32px;
+}
+
+.other-recipe-block {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-bottom: 84px;
+}
+
+.other-recipe-block__item {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex: 0 1 auto;
+}
+
+.other-recipe-block__item>img {
+    border-radius: 16px;
+    flex: 0 0 180px;
+}
+
+.other-recipe__text>h6 {
+    margin-bottom: 16px;
+}
+
+.ads {
+    width: 400px;
+    height: 434px;
+    background: url('../../assets/images/homepage/choosing-recipe/ads.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+.ads>a {
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    padding-top: 385px;
+}
+
+/* =========================================================================================== */
+
+@media screen and (max-width: 1200px) {
+    .cooking__wrapper {
+        margin-top: 5vw;
+        margin-bottom: 10vw;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ads {
+        width: 280px;
+        height: 303px;
+    }
+
+    .ads>a {
+        padding-top: 255px;
+    }
+
+    .other-recipe-block__item {
+        flex-direction: column;
+    }
+
+    .other-recipe-block__item>img {
+        max-width: 100%;
+    }
+
+    .other-recipe-block {
+        gap: 3vw;
+        margin-bottom: 4vw;
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .cooking__wrapper {
+        flex-direction: column;
+        margin-top: 5vw;
+        margin-bottom: 10vw;
+        gap: 5vw;
+    }
+    .ingredients-list {
+        margin-bottom: 4vw;
+    }
+
+    .other-recipe-block {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .other-recipe-block__item {
+        flex: 1 1 30%;
+        align-items: start;
+    }
+
+    .other-recipe-block__item>img {
+        flex: 1 0 auto;
+    }
+
+
+    .cooking-step__ingredients {
+        margin-bottom: 4vw;
+    }
+
+    .cooking-step__direction {
+        padding-top: 3vw;
+    }
+
+    .ingredients-list__item {
+        height: 10vw;
+        gap: 2.5vw;
+    }
+
+    .step-list__item {
+        gap: 2.5vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ads {
+        width: 200px;
+        height: 217px;
+    }
+
+    .ads>a {
+        padding-top: 185px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .other-recipe__text>h6 {
+        margin-bottom: 2vw;
+    }
+
+    .ingredients-list__item {
+        height: 12vw;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .other-recipe-block {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .other-recipe-block__item {
+        gap: 2.5vw;
+    }
+
+    .ingredients-list__item {
+        height: 13vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .ingredients-list__item {
+        height: 15vw;
+    }
+}

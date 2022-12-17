@@ -1,0 +1,144 @@
+.more-recipes__wrapper {
+    height: 868px;
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.more-recipes__titles {
+    display: flex;
+    height: 116px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.more-recipes__grid {
+    height: 692px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 27px;
+}
+
+.more-recipes__item {
+    position: relative;
+
+}
+
+.more-recipes__title-p {
+    margin-top: 13px;
+    margin-bottom: 27px;
+}
+
+.more-recipes__like {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.more-recipes__item>img {
+    border-radius: 30px;
+    max-width: 100%;
+}
+
+.more-recipes__cooking {
+    display: flex;
+    gap: 24px;
+}
+
+/* ============================================================================== */
+
+@media screen and (max-width: 1200px) {
+    .more-recipes__wrapper {
+        height: auto;
+        margin-top: 8vw;
+        margin-bottom: 8vw;
+    }
+
+    .more-recipes__grid {
+        height: auto;
+        column-gap: 3vw;
+        row-gap: 3vw;
+    }
+
+    .more-recipes__title-p {
+        height: 5vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .more-recipes__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .more-recipes__titles {
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 6vw;
+        text-align: center;
+    }
+
+    .more-recipes__titles>h2 {
+        margin-bottom: 3vw;
+    }
+
+    .more-recipes__item {
+        width: 80%;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .more-recipes__title-p {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .more-recipes__like {
+        top: 3vw;
+        right: 3vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .more-recipes__wrapper {
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .more-recipes__cooking {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5vw;
+    }
+
+    .more-recipes__title-p {
+        margin-top: 2vw;
+        margin-bottom: 3vw;
+        height: 8vw;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .more-recipes__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .more-recipes__cooking {
+        flex-direction: row;
+    }
+
+    .more-recipes__title-p {
+        height: auto;
+    }
+
+    .more-recipes__like {
+        top: 4vw;
+        right: 4vw;
+    }
+}

@@ -1,0 +1,24 @@
+@import "normalize.css";
+
+@import "./scss/fonts.scss";
+@import "./scss/reset.scss";
+
+@import "./scss/theme/colors.scss";
+@import "./scss/theme/typography.scss";
+@import "./scss/theme/breakpoints.scss";
+@import "./scss/common.scss";
+
+:root {
+  --main-color: rgba(0, 0, 0, 1);
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

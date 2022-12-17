@@ -1,0 +1,223 @@
+.subscribe-card__wrapper {
+    height: 442px;
+    background: #E7F9FD;
+    border-radius: 60px;
+    overflow: hidden;
+    margin-bottom: 160px;
+    position: relative;
+}
+
+.subscribe-card__titles {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.subscribe-card__titles>p {
+    margin-top: 24px;
+}
+
+.subscribe-img-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.subscribe-img-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.subscribe-form {
+    margin-top: 64px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subscribe-form__input {
+    width: 480px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid transparent;
+}
+
+.subscribe-form>span {
+    position: absolute;
+    top: 31px;
+    left: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.subscribe-form__input:valid~span,
+.subscribe-form__input:focus~span {
+    color: green;
+    transform: translate(0, -220%);
+    font-size: 0.8em;
+    padding: 0 10px;
+    background: #fff;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    letter-spacing: 0.2em;
+}
+
+.subscribe-form__input:valid,
+.subscribe-form__input:focus {
+    border: 1px solid green;
+}
+
+
+.subscribe-form__button {
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    right: 10px;
+    top: 10px;
+    background: #000000;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+}
+
+/* =================================================================================== */
+@media screen and (max-width: 1200px) {
+    .subscribe-card__wrapper {
+        height: auto;
+        margin-bottom: 7vw;
+    }
+
+    .subscribe-img-left {
+        width: 25%;
+    }
+
+    .subscribe-img-right {
+        width: 25%;
+    }
+
+    .subscribe-form {
+        margin-top: 3vw;
+        padding-bottom: 4vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .subscribe-card__titles {
+        padding-top: 5vw;
+    }
+
+    .subscribe-card__titles>p {
+        margin-top: 3vw;
+    }
+
+    .subscribe-form>span {
+        top: 25%;
+        left: 10%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .subscribe-form__input {
+        width: 400px;
+        height: 70px;
+    }
+
+    .subscribe-form__button {
+        width: 130px;
+        height: 50px;
+    }
+
+    .subscribe-card__wrapper {
+        margin-bottom: 3vw;
+    }
+
+    .subscribe-img-left {
+        width: 35%;
+    }
+
+    .subscribe-img-right {
+        width: 35%;
+    }
+
+    .subscribe-form__input:valid~span,
+    .subscribe-form__input:focus~span {
+        transform: translate(-10%, -200%);
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .subscribe-card__wrapper {
+        border-radius: 30px;
+    }
+
+    .subscribe-form__input {
+        width: 300px;
+        height: 150px;
+    }
+
+    .subscribe-form__button {
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .subscribe-form>span {
+        top: 25%;
+        left: 30%;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .subscribe-img-left {
+        width: 55%;
+    }
+
+    .subscribe-img-right {
+        width: 55%;
+    }
+
+    .subscribe-card__titles>p {
+        line-height: 1.2;
+    }
+
+    .subscribe-form__input:valid~span,
+    .subscribe-form__input:focus~span {
+        transform: translate(-20%, -170%);
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .subscribe-form__input {
+        width: 100%;
+        height: 110px;
+    }
+
+    .subscribe-form__button {
+        transform: translate(50%, -20%);
+    }
+
+    .subscribe-form>span {
+        top: 15%;
+        left: 25%;
+    }
+
+    .subscribe-form__input:valid~span,
+    .subscribe-form__input:focus~span {
+        transform: translate(-10%, -70%);
+        letter-spacing: 0.4px;
+    }
+}

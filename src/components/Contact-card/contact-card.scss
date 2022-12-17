@@ -1,0 +1,204 @@
+.contact-card__wrapper {
+    margin-top: 84px;
+    margin-bottom: 160px;
+}
+
+.contact-us-image img {
+    max-width: 100%;
+}
+
+.contact-us-form {
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "img name address"
+        "img subject type"
+        "img message message"
+        "img submit submit";
+}
+
+.contact-us-image {
+    grid-area: img;
+}
+
+.user-name {
+    grid-area: name;
+}
+
+.user-subject {
+    grid-area: subject;
+}
+
+.user-email {
+    grid-area: address;
+}
+
+.user-enquiry {
+    grid-area: type;
+}
+
+.user-message {
+    grid-area: message;
+}
+
+.submit-btn {
+    grid-area: submit;
+}
+
+.contact-card__wrapper>h1 {
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+.form-wrapper select,
+.form-wrapper input {
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: calc(10px + 4*(100vw / 1920));
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+}
+
+.form-wrapper textarea {
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+    margin-bottom: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: calc(10px + 4*(100vw / 1920));
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+}
+
+.contact-us-form label {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    font-size: calc(8px + 4*(100vw / 1920));
+    line-height: 1.66;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 12px;
+}
+
+.submit-btn {
+    width: 180px;
+    height: 64px;
+    background: #000000;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 16px;
+    font-size: calc(12px + 4*(100vw / 1920));
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+/* ===================================================================================== */
+
+@media screen and (max-width: 1200px) {
+    .contact-card__wrapper {
+        margin-top: 6vw;
+        margin-bottom: 10vw;
+    }
+
+    .contact-card__wrapper>h1 {
+        margin-bottom: 5vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contact-us-form {
+        column-gap: 5vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "img name"
+            "img address"
+            "img subject"
+            "img type"
+            "message message"
+            "submit submit";
+    }
+
+    .form-wrapper select,
+    .form-wrapper input {
+        height: 6vw;
+        padding-left: 1.3vw;
+        margin-bottom: 1.6vw;
+    }
+
+    .form-wrapper textarea {
+        height: 15vw;
+        padding-top: 1.3vw;
+        margin-bottom: 3.5vw;
+    }
+
+    .contact-us-form label {
+        margin-bottom: 1.3vw;
+    }
+
+    .contact-us-image {
+        padding-bottom: 2vw;
+    }
+}
+
+@media screen and (max-width: 882px) {}
+
+@media screen and (max-width: 767px) {
+    .submit-btn {
+        width: 22vw;
+        height: 9vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-us-form {
+        grid-template-columns: 1fr;
+        grid-template-areas: "img"
+            "name"
+            "address"
+            "subject"
+            "type"
+            "message"
+            "submit";
+    }
+
+    .form-wrapper select,
+    .form-wrapper input {
+        height: 12vw;
+        padding-left: 2.5vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .form-wrapper textarea {
+        height: 25vw;
+        padding-top: 2.5vw;
+        margin-bottom: 3.5vw;
+    }
+
+    .contact-us-form label {
+        margin-bottom: 2.5vw;
+    }
+
+    .contact-us-image {
+        text-align: center;
+    }
+    .contact-us-image img {
+        max-width: 60%;
+        
+    }
+}

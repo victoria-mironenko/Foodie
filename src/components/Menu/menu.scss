@@ -1,0 +1,46 @@
+
+
+@media screen and (max-width: 882px) {
+
+    .closed {
+        transform: translateY(-200%);
+        animation: hide-menu 0.8s ease-in-out;
+        background-color: rgb(72, 90, 103);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 120px;
+
+    }
+    .open {
+        transform: translateY(0);
+        animation: show-menu 0.8s ease-in-out;
+        background-color: rgb(72, 90, 103);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 120px;
+    }
+    
+    @keyframes hide-menu {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-200%);
+        }
+    }
+    @keyframes show-menu {
+        0% {
+            transform: translateY(-200%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+}

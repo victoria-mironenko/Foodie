@@ -1,0 +1,265 @@
+.featured-recipe-container {
+    margin-top: 40px;
+    width: 100vw;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.left-el,
+.right-el {
+    flex: 1 1 auto;
+    background-color: rgba(231, 250, 254, 1);
+    height: 600px;
+}
+
+.left-el {
+    border-radius: 0px 3em 3em 0px;
+}
+
+.right-el {
+    border-radius: 3em 0px 0px 3em;
+}
+
+
+.featured-recipe__wrapper {
+    position: relative;
+    max-height: 640px;
+    background-color: rgba(231, 250, 254, 1);
+    border-radius: 3em;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.featured-recipe__badge {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.2%;
+}
+
+.badge {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-recipe__info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.features-recipe__top {
+    flex: 1 1 auto;
+}
+
+.subtitle-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 156px;
+    height: 45px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 13px;
+    margin-bottom: 32px;
+}
+
+.subtitle-block img {
+    width: 24px;
+    height: 24px;
+}
+
+.featured-recipe__text {
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
+
+.hot-recipe-details {
+    display: flex;
+    gap: 16px;
+}
+
+
+.hot-recipe__timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    width: 139px;
+    height: 40px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+.hot-recipe__dish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 119px;
+    height: 40px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.chef-block {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.chef-block__more {
+    width: 200px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.chef-block__more a {
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.chef-block__author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.chef-block__data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chef-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+/* ==================================================================================== */
+
+@media screen and (max-width: 1100px) {
+    .featured-recipe__wrapper {
+        max-height: 600px;
+    }
+
+    .featured-recipe__info {
+        padding: 2.6vw;
+    }
+
+    .featured-recipe-container {
+        margin-top: 3vw;
+    }
+
+    .left-el,
+    .right-el {
+        height: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .featured-recipe__wrapper {
+        max-height: 540px;
+    }
+
+    .chef-block {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .featured-recipe-container {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featured-recipe__wrapper {
+        flex-direction: column;
+        max-height: 800px;
+    }
+
+    .featured-recipe__badge {
+        top: 5%;
+        left: 85%;
+        width: 16%;
+    }
+
+    .chef-block {
+        height: 70px;
+    }
+
+    .featured-recipe__image>img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .chef-block__more {
+        width: 170px;
+        height: 50px;
+        border-radius: 15px;
+        gap: 13px;
+    }
+
+    .subtitle-block {
+        margin-top: 20px;
+        margin-bottom: 26px;
+    }
+
+    .featured-recipe__wrapper {
+        border-radius: 2em;
+    }
+
+    .featured-recipe__badge {
+        width: 25%;
+    }
+
+    .hot-recipe-details {
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+
+    .hot-recipe__timer {
+        gap: 10px;
+    }
+
+    .hot-recipe__dish {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .chef-block {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .featured-recipe__wrapper {
+        border-radius: 1em;
+    }
+}

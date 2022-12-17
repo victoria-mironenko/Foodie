@@ -1,0 +1,128 @@
+.header-burger {
+    display: none;
+}
+
+@media screen and (max-width: 882px) {
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 33px;
+        background-color: rgba(255, 116, 38, 1);
+        border-radius: 9px;
+        padding-left: 3px;
+        z-index: 3;
+    }
+
+    .header-burger::before,
+    .header-burger::after {
+        content: '';
+        background-color: aliceblue;
+        width: 32px;
+        height: 3px;
+        position: absolute;
+        
+    }
+
+    .header-burger::before {
+        top: 6px;
+        animation: back-line-two 0.6s ease-in-out;
+    }
+
+    .header-burger::after {
+        bottom: 6px;
+        animation: back-line-one 0.6s ease-in-out;
+    }
+
+    .header-burger span {
+        background-color: aliceblue;
+        width: 32px;
+        height: 3px;
+        position: absolute;
+        top: 15px;
+        animation: return-line 0.6s ease-in-out;
+    }
+
+    .header-burger.active::after {
+        bottom: 15px;
+        transform: rotate(45deg);
+        animation: rotate-line-one 0.5s ease-in-out;
+    }
+    
+    .header-burger.active::before {
+        top: 15px;
+        transform: rotate(-45deg);
+        animation: rotate-line-two 0.5s ease-in-out;
+    }
+
+    .header-burger.active span {
+        display: none;
+        animation: hide-line 0.5s ease-in-out;
+    }
+
+    @keyframes rotate-line-one {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes rotate-line-two {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes hide-line {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    @keyframes back-line-one {
+        30% {
+            transform: rotate(0);
+        }
+        70% {
+            transform: rotate(-180deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    @keyframes back-line-two {
+        30% {
+            transform: rotate(0);
+        }
+        70% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes return-line {
+        30% {
+            transform: scale(0.2);
+        }
+        70% {
+            transform: scale(0.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+
+}
