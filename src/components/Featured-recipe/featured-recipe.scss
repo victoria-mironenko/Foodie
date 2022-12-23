@@ -130,6 +130,11 @@
     gap: 17px;
 }
 
+.chef-block__more:hover {
+    transform: scale(1.2);
+    box-shadow: 2px -2px 4px grey;
+}
+
 .chef-block__more a {
     color: rgba(255, 255, 255, 1);
 

@@ -12,6 +12,8 @@ export class Header extends core.Component {
                 {to: appRoutes.blog, label: 'Blog'},
                 {to: appRoutes.contact, label: 'Contact'},
                 {to: appRoutes.about, label: 'About us'},
+                {to: appRoutes.admin, label: 'Admin'},
+                {to: appRoutes.signIn, label: 'Sign in'},
             ]
         };
         this.props = {};
@@ -25,23 +27,23 @@ export class Header extends core.Component {
 
         <header class="header">
         <div class="header__container container">
-            <a href="#" class="header__logo">
+            <a href="${appRoutes.home}" class="header__logo">
                 <img src="../../assets/images/logo.svg" alt="logo">
             </a>
             <my-menu class="header__menu menu" items='${JSON.stringify(this.state.menuItems)}'></my-menu>
             <ul class="header__social-list social-list">
                 <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/" target="_blank">
                         <img class="social-logo" src="../../assets/images/social/facebook-logo.svg" alt="facebook-icon">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://twitter.com/" target="_blank">
                         <img class="social-logo" src="../../assets/images/social/twitter-logo.svg" alt="twitter-icon">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/" target="_blank">
                         <img class="social-logo" src="../../assets/images/social/instagram-logo.svg" alt="instagram-icon">
                     </a>
                 </li>

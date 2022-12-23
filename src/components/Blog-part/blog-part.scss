@@ -44,6 +44,10 @@
     letter-spacing: -0.02em;
 }
 
+.search-form__button:hover {
+    transform: scale(1.1);
+}
+
 .main-part__wrapper {
     margin-top: 90px;
     margin-bottom: 160px;
@@ -74,6 +78,11 @@
 .blog-list__item>img {
     border-radius: 20px;
     max-width: 100%;
+}
+
+.blog-list__item>img:hover {
+    transform: scale(1.1);
+    box-shadow: 2px -2px 4px grey;
 }
 
 .author-block {

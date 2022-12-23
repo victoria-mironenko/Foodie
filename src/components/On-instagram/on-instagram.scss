@@ -137,6 +137,11 @@
     gap: 17px;
 }
 
+.block-link:hover {
+    transform: scale(1.2);
+    box-shadow: 2px -2px 4px grey;
+}
+
 .block-link>a {
     color: rgba(255, 255, 255, 1);
 

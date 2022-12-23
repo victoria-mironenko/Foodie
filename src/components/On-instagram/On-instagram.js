@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './on-instagram.scss';
 
 export class OnInstagram extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     render() {
         return `

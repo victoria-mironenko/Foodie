@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './learn-more.scss';
 
 export class LearnMore extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     render() {
         return `

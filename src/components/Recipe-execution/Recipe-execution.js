@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './recipe-execution.scss';
 
 export class RecipeExecution extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     render() {
         return `

@@ -5,6 +5,8 @@ import '../Preloader';
 import { initialFieldsState } from "./initialState";
 import { FormManager } from "../../core/FormManager/FormManager";
 import { Validator } from "../../core/FormManager/Validator";
+import { authService } from "../../services/Auth";
+import { appRoutes } from "../../constants/appRoutes";
 
 export class ContactCard extends Component {
     constructor() {
@@ -19,9 +21,35 @@ export class ContactCard extends Component {
         this.form = new FormManager();
     }
 
+    toggleisLoading = () => {
+        this.setState((state) => {
+            return {
+                ...state,
+                isLoading: !state.isLoading,
+            };
+        });
+    };
+
     registerUser = (data) => {
-        console.log(data);
-    }
+        this.toggleisLoading();
+        authService
+            .signUp(data.email, data.password)
+            .then((user) => {
+                authService.user = user;
+                this.dispatch("change-route", { target: appRoutes.home });
+            })
+            .catch((error) => {
+                this.setState((state) => {
+                    return {
+                        ...state,
+                        error: error.message,
+                    };
+                });
+            })
+            .finally(() => {
+            this.toggleisLoading();
+            });
+        };
 
     validateForm = (evt) => {
         if (evt.target.closest("my-input")) {
@@ -30,9 +58,10 @@ export class ContactCard extends Component {
                     Validator.email("Email is not valid"),
                     Validator.required("The field should not be empty"),
                 ],
-            })
+                password: [Validator.required("The field should not be empty")],
+            });
         }
-    }
+    };
 
     validate = (evt) => {
         this.setState((state) => {
@@ -54,7 +83,7 @@ export class ContactCard extends Component {
 
     render() {
         const {
-            fields: { email },
+            fields: { email, password },
         } = this.state;
         return `
     <my-preloader is-loading="${this.state.isLoading}">    
@@ -62,7 +91,9 @@ export class ContactCard extends Component {
             <div class="contact-card__wrapper container">
                 <h1>Contact us</h1>
                 <div class="form-wrapper">
+                    
                     <form class="registration-form contact-us-form" action="">
+                    
                         <div class="contact-us-image">
                             <img src="../../assets/images/contact-image.png" alt="chef">
                         </div>
@@ -70,18 +101,25 @@ export class ContactCard extends Component {
                             <label for="your-name">Name</label>
                             <input type="text" id="your-name" placeholder="Enter your name...">
                         </div>
-                        <div class="user-subject">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" placeholder="Enter subject...">
-                        </div>
                         <my-input
                             type="email"
                             label="Email"
                             control-name="email"
+                            class-name="user-email"
                             value="${email.value}"
                             is-valid="${email.isValid}"
                             is-touched="${email.isTouched}"
                             error-message="${email.errors?.message}"
+                        ></my-input>
+                        <my-input
+                            type="password" 
+                            label="Password"
+                            control-name="password"
+                            class-name="first-pass user-password"
+                            value="${password.value}"
+                            is-valid="${password.isValid}"
+                            is-touched="${password.isTouched}"
+                            error-message="${password.errors?.message}"
                         ></my-input>
                         <div class="user-enquiry">
                             <label for="type">ENquiry type</label>
@@ -95,9 +133,11 @@ export class ContactCard extends Component {
                             <label for="messages">MEssages</label>
                             <textarea id="messages" name="messages">
                                     Enter your messages...
-                                </textarea>
+                            </textarea>
                         </div>
+                        <div class="invalid-feedback text-center mb-3 d-block">${this.state.error}</div>
                         <button class="submit-btn" type="submit">Submit</button>
+                        
                     </form>
                 </div>
             </div>

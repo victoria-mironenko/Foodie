@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './blog-part.scss';
 
 export class BlogPart extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     render() {
         return `

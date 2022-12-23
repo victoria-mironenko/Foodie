@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './subscribe-card.scss';
 
 export class SubscribeCard extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     render() {
         return `

@@ -20,6 +20,11 @@
     font-size: 16px;
 }
 
+.categories-more:hover {
+    transform: scale(1.2);
+    box-shadow: 2px -2px 4px grey;
+}
+
 .categories__items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -30,6 +35,10 @@
 
 .categories__items img {
     max-width: 100%;
+}
+
+.categories__items img:hover {
+    transform: scale(1.2);
 }
 
 /* ============================================================================ */

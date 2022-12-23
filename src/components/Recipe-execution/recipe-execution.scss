@@ -61,6 +61,13 @@
     background: rgba(231, 250, 254, 1);
 }
 
+.print__wrapper:hover,
+.share__wrapper:hover {
+    transform: scale(0.7);
+    box-shadow: 2px -2px 4px grey;
+    cursor: pointer;
+}
+
 .cooking-time__first-line,
 .services__text {
     font-weight: 500;

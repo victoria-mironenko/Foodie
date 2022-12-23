@@ -12,7 +12,7 @@
     column-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "img name address"
-        "img subject type"
+        "img password type"
         "img message message"
         "img submit submit";
 }
@@ -25,8 +25,8 @@
     grid-area: name;
 }
 
-.user-subject {
-    grid-area: subject;
+.user-password {
+    grid-area: password;
 }
 
 .user-email {
@@ -43,6 +43,11 @@
 
 .submit-btn {
     grid-area: submit;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 2px -2px 4px grey;
 }
 
 .contact-card__wrapper>h1 {
@@ -128,7 +133,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "img name"
             "img address"
-            "img subject"
+            "img password"
             "img type"
             "message message"
             "submit submit";
@@ -171,7 +176,7 @@
         grid-template-areas: "img"
             "name"
             "address"
-            "subject"
+            "password"
             "type"
             "message"
             "submit";

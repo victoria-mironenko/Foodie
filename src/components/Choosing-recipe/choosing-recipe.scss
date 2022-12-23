@@ -27,6 +27,11 @@
     position: relative;
 }
 
+.recipe-item:hover {
+    transform: scale(1.1);
+    box-shadow: 2px -2px 4px grey;
+}
+
 .recipe-item__like {
     position: absolute;
     top: 36px;

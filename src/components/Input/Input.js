@@ -21,12 +21,12 @@ export class Input extends Component {
 
         return `
         
-            <div class="user-email">
+            <div>
                 <label>${this.props.label}</label>
                 <input 
                     class="form-control ${isAddClassName} ${this.props['class-name'] ?? ''}" 
                     type="${this.props.type}" 
-                    placeholder="Your email address..."
+                    placeholder="Your ${this.props.type}..."
                     name="${this.props['control-name']}"
                     value="${this.props.value}"
                 />

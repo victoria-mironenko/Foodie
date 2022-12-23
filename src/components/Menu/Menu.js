@@ -48,6 +48,7 @@ export class Menu extends core.Component {
     componentWillUnmount() {
         window.removeEventListener('toggle-menu', this.toggleMenu);
         window.removeEventListener('change-route', this.toggleMenu);
+        window.removeEventListener('change-route', this.onChangeRoute);
     }
 
 
@@ -81,6 +82,14 @@ export class Menu extends core.Component {
                     </li>
                     `
                 }).join('')}
+                
+
+                <li class="menu__item"> 
+                    <a href="#" class="sign-out-link">
+                        <span class="menu__link">Sigh out</span>
+                    </a>
+                </li>
+                
             </ul>
         </nav>
         

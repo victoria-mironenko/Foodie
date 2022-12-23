@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './cooking.scss';
 
 export class Cooking extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     onClick = (evt) => {
         const target = evt.target.closest('.ingredients-list__item');

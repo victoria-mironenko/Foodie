@@ -2,11 +2,7 @@ import { Component } from "../../core";
 import './more-recipes.scss';
 
 export class MoreRecipes extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.props = {};
-    }
+    
 
     render() {
         return `
